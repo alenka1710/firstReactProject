@@ -21,7 +21,7 @@ var Artical = React.createClass({
                 <span className='tempreture'>Temperature:{tempreture}</span>
                 <a href="#" onClick={this.readmoreClick}
                 className={visible?'noneItem':''}>More inf.</a>
-                <p className={'description ' + (visible?'': 'noneItem')}>{description}</p>
+                <p className={visible?'':'noneItem'}>{description}</p>
             </div>
         )
     }

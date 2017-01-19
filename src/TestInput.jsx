@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import TestForm from './TestForm';
 class TestInput extends Component{
     constructor(props){
         super(props);
@@ -7,16 +8,23 @@ class TestInput extends Component{
             value:''
         };
         this.onClickHandler = this.onClickHandler.bind(this);
+        this.updateHandler = this.updateHandler.bind(this);
     }
+    
+    componentDidMount () {
+        // ReactDOM.findDOMNode(this.refs.myTextInput).focus();
+        // console.log('focus in parent component');
+    }
+    
     updateHandler(event){
        this.setState({
            value: event.target.value
        })
     }
     onClickHandler(){
-        console.log(ReactDOM.findDOMNode(this.refs.myTextInput).value);
+        console.log(this.state.value);
+       // console.log(ReactDOM.findDOMNode(this.refs.myTextInput).value);
     }
-    
     render(){
         return(
             <div className='wrapper'>
@@ -24,12 +32,13 @@ class TestInput extends Component{
                     placeholder = 'enter some text'
                     defaultValue = ''
                     ref = 'myTextInput'
+                    value = {this.state.value}
                     className = 'text-input'
-                    onChange = {this.updateHandler.bind(this)}
+                    onChange = {this.updateHandler}
                 />
-                <p>{this.state.value}</p>
-                <button onClick = {this.onClickHandler}>Click me</button>
+                <input type='button' onClick = {this.onClickHandler} />Click me
                 <h1>{this.state.value?this.state.value:''}</h1>
+                <TestForm />
             </div>
         )
     }
