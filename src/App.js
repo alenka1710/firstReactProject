@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Alena from './Alena';
 import logo from './logo.svg';
 import './App.css';
+import SignIn from './SignIn';
 import TestInput from './TestInput'
-import New from './News';
 var arrayNames=['alena','alex','marina','vlad'];
 var weatherInTheCity = [
   {
@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+       {/* <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>what's the weather today?</h2>
         </div>
@@ -34,7 +34,9 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Alena data={weatherInTheCity} dataArray={arrayNames}/>
-        <TestInput />
+        <TestInput dataWeather={weatherInTheCity}/>
+      */}
+        <SignIn />
       </div>
     );
   }

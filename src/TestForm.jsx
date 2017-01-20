@@ -28,12 +28,12 @@ class TestForm extends Component{
     }
     updateData(event){
         // console.log('отрисовка события) ' + event);
-        if(event.target.getAttribute('name')==='author'){
+        if (event.target.name === 'author'){
             this.setState({
                 authorValue:event.target.value
             })
         }
-        else{
+        else {
             this.setState({
                textValue:event.target.value
             })
@@ -68,7 +68,7 @@ class TestForm extends Component{
                               (this.state.authorValue.length>0)&&
                               (this.state.textValue.length>0)) ?'':'noneItem '}
                               onClick={this.onButtonClick}
-                >Submit New</button>
+                >Add New</button>
                 </form>
             </div>
         )

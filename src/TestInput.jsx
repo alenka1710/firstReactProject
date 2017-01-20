@@ -5,16 +5,20 @@ class TestInput extends Component{
     constructor(props){
         super(props);
         this.state= {
-            value:''
+            value:'',
+            news:this.props.dataWeather
         };
         this.onClickHandler = this.onClickHandler.bind(this);
         this.updateHandler = this.updateHandler.bind(this);
     }
     
     componentDidMount () {
-        // ReactDOM.findDOMNode(this.refs.myTextInput).focus();
-        // console.log('focus in parent component');
+        /*слушать событие создана новость */
     }
+    componentWillUnmount () {
+        /*больше не слушать событие*/
+    }
+    
     
     updateHandler(event){
        this.setState({
@@ -38,7 +42,7 @@ class TestInput extends Component{
                 />
                 <input type='button' onClick = {this.onClickHandler} />Click me
                 <h1>{this.state.value?this.state.value:''}</h1>
-                <TestForm />
+                <TestForm dataWeather={this.props.dataWeather}/>
             </div>
         )
     }
