@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+/*styles for Sign-In*/
+.wrapper-sign-in{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.wrapper-sign-in h1{
+  margin: 0;
+  color:rgb(0,181,209);
+}
+.wrapper-sign-in h1~span{
+  margin: 15px 0;
+  font-size: 13px;
+}
+.wrapper-sign-in .sign-in-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 285px;
+}
+.wrapper-sign-in .sign-in-form input{
+  width: 100%;
+  height: 38px;
+  border:1px solid rgb(0,181,209);
+  border-radius: 5px;
+  font-size: 13px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.wrapper-sign-in .sign-in-form input[type='checkbox']{
+  height: 15px;
+  width: 15px;
+  line-height: 38px;
+  margin: 0;
+}
+.wrapper-sign-in .sign-in-form button{
+  width: 100%;
+  color:white;
+  background-color: rgb(0,181,209);
+  border-radius: 5px;
+  height: 40px;
+}
+.wrapper-sign-in .sign-in-form .container-agreement{
+  display: flex;
+  height: 38px;
+  width: 100%;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.wrapper-sign-in .sign-in-form .error{
+  margin: 0;
+  color: red;
+  display: none;
+  margin-bottom: 10px;
+}
